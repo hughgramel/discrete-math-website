@@ -1,10 +1,17 @@
-function App() {
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Home from './pages/Home';
+import TruthTable from './pages/TruthTable';
+import './output.css'
 
+function App() {
   return (
-    <div className="container mx-auto p-4 max-w-md">
-        Hugh moments
-    </div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/truth-table" element={<TruthTable />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App
